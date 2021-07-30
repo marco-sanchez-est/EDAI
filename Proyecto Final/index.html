@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="es-MX">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora - Notación Polaca y Notación Polaca Inversa</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <link rel="icon" href="icons/favicon.png">
+    <script src="js/keyboard.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Calculadora</h1>
+      <h3>Notación Polaca y Notación Polaca Inversa</h3>
+    </header>
+    <div class="topbar">
+      <div class="selection">
+        <a href="prefix">Notación Polaca</a>
+        <a href="postfix">Notación Polaca Inversa</a>
+      </div>
+      <div class="documentation">
+        <a href="help">?</a>
+      </div>
+    </div>
+    <div class="calculator">
+      <button class="button clear" type="button" onclick='clear_display()'>C</button>
+      <div class="display">
+        <p id="operation"></p>
+      </div>
+      <div class="operands">
+        <button class="button seven" type="button" onclick='print_7()'>7</button>
+        <button class="button eight" type="button" onclick='print_8()'>8</button>
+        <button class="button nine" type="button" onclick='print_9()'>9</button>
+        <button class="button four" type="button" onclick='print_4()'>4</button>
+        <button class="button five" type="button" onclick='print_5()'>5</button>
+        <button class="button six" type="button" onclick='print_6()'>6</button>
+        <button class="button one" type="button" onclick='print_1()'>1</button>
+        <button class="button two" type="button" onclick='print_2()'>2</button>
+        <button class="button three" type="button" onclick='print_3()'>3</button>
+        <button class="button zero" type="button" onclick='print_0()'>0</button>
+        <button class="button open" type="button" onclick='print_open()'>(</button>
+        <button class="button close" type="button" onclick='print_close()'>)</button>
+      </div>
+      <div class="operators">
+        <button class="button power" type="button" onclick='print_power()'>^</button>
+        <button class="button square" type="button" onclick='print_square()'>sqr</button>
+        <button class="button times" type="button" onclick='print_times()'>*</button>
+        <button class="button division" type="button" onclick='print_division()'>/</button>
+        <button class="button plus" type="button" onclick='print_plus()'>+</button>
+        <button class="button minus" type="button" onclick='print_minus()'>-</button>
+      </div>
+      <div class="functions">
+        <button class="button delete" type="button" onclick='delete_char()'>Del</button>
+        <button class="button equal" type="button" onclick='calculate()'>=</button>
+      </div>
+    </div>
+    <footer>
+      <p>Creado por Marco Antonio Sánchez Hernández</p>
+      <p>Última modificación: 21/07/2021 a las 15:07</p>
+      <p>Esta página se encuentra alojada en GitHub</p>
+    </footer>
+  </body>
+
+</html>
