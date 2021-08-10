@@ -1,0 +1,83 @@
+/*  Propiedades generales de la página web */
+body {
+  font-family: 'VCR OSD Mono';    /* Se hace uso de la tipografía definida en fonts.css */
+  overflow: hidden;
+}
+
+
+/*  Propiedades del encabezado de la página web */
+header {
+  text-align: center;
+  line-height: 10px;
+}
+
+
+/*  Propiedades de la división topbar (menú de navegación) */
+.topbar {
+  position: relative;
+  overflow: hidden;
+  background-color: #353635;
+}
+
+
+/*  Propiedades para los enlaces de navegación contenidos en la división topbar */
+.topbar .selection {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*  Propiedades para el enlace de ayuda contenido en la división topbar */
+.topbar .documentation {
+  float: right;
+}
+
+
+/*  Propiedades de los enlaces contenidos en la división topbar */
+.topbar a{
+  float: left;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+}
+
+
+/*  Propiedades de los enlaces contenidos en el menú de navegación cuando el cursor es colocado sobre estos */
+.topbar .selection a:hover{
+  background-color: black;
+}
+
+
+/*  Propiedades del enlace de ayuda para el usuario cuando el cursor es colocado sobre este */
+.topbar .documentation a:hover {
+  background-color: #BB001D;
+}
+
+
+/*  Propiedades generales de la división calculator, en la cual se encuentra la interfaz gráfica */
+.calculator {
+  width: 334px;
+  height: 375px;
+  background-color: #909090;
+  border-radius: 7px;
+  box-shadow: 0 10px #5B5656;
+  margin: 20px auto 30px;
+  position: relative;
+}
+
+
+/*  Propiedades generales del footer de la página web*/
+footer {
+  border-top: 5px solid #353635;
+  background-color: #299130;
+  padding: 0.15em 3%;
+  text-align: center;
+  font-size: 13px;
+  color: white;
+  line-height: 10px;
+}
