@@ -1,0 +1,90 @@
+<!-- Calculadora para notación polaca inversa -->
+<!-- Versión: 1.0 -->
+<!-- Desarrollador: Marco Antonio Sánchez Hernández -->
+<!-- Última modificación: 10-08-2021 -->
+<!-- NOTA: El funcionamiento de esta página web ha sido probado únicamente
+     en los navegadores Mozilla Firefox 90.0.2 y GNOME Epiphany 40.2.
+     Actualmente, no se garantiza el correcto funcionamiento de esta página
+     en algún otro navegador.-->
+
+
+<!DOCTYPE html>
+
+<html lang="es-MX">   <!-- Idioma de la página web-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora - Notación Polaca y Notación Polaca Inversa</title>
+    <link rel="stylesheet" href="css/main.css">   <!-- Propiedades CSS de la página principal -->
+    <link rel="stylesheet" href="css/fonts.css">   <!-- Definición de la tipografía utilizada -->
+    <link rel="stylesheet" href="css/calculator.css">   <!-- Propiedades CSS de la interfaz gráfica (calculadora)-->
+    <link rel="icon" href="icons/favicon.png">   <!-- Ícono de la página Web -->
+    <script src="js/keyboard.js"></script>   <!-- Funcionamiento del teclado -->
+    <script src="js/main.js"></script>   <!-- Conversión a notación polaca inversa -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Calculadora</h1>
+      <h3>Notación Polaca y Notación Polaca Inversa</h3>
+    </header>
+
+    <!-- Menú de navegación. NOTA: Actualmente no cuenta con alguna funcionalidad programada -->
+    <div class="topbar">
+      <div class="selection">
+        <a href="prefix">Notación Polaca</a>   <!-- Calcular una expresión en notación polaca -->
+        <a href="postfix">Notación Polaca Inversa</a>   <!-- Calcular una expresión en notación polaca inversa -->
+      </div>
+      <div class="documentation">
+        <a href="help">?</a>   <!-- Se brinda ayuda al usuario -->
+      </div>
+    </div>
+
+    <!-- Interfaz gráfica (Calculadora) -->
+    <div class="calculator">
+      <button class="button clear" type="button" onclick='clear_display()'>C</button>   <!-- Botón para borrar todo lo escrito -->
+      <div class="display">   <!-- Simulación de la pantalla de una calculadora, en ella se muestran las operaciones -->
+        <p id="operation"></p>   <!-- Elemento paragraph que permite mostrar lo escrito y la respuesta -->
+      </div>
+
+      <!-- La función de cada botón actualmente definida, se encuentra en el archivo keyboard.js-->
+
+      <!-- División para definir los botones que contienen números y los paréntesis -->
+      <div class="operands">
+        <button class="button seven" type="button" onclick='print_7()'>7</button>
+        <button class="button eight" type="button" onclick='print_8()'>8</button>
+        <button class="button nine" type="button" onclick='print_9()'>9</button>
+        <button class="button four" type="button" onclick='print_4()'>4</button>
+        <button class="button five" type="button" onclick='print_5()'>5</button>
+        <button class="button six" type="button" onclick='print_6()'>6</button>
+        <button class="button one" type="button" onclick='print_1()'>1</button>
+        <button class="button two" type="button" onclick='print_2()'>2</button>
+        <button class="button three" type="button" onclick='print_3()'>3</button>
+        <button class="button zero" type="button" onclick='print_0()'>0</button>
+        <button class="button open">(</button>   <!-- Este botón no cuenta con una función programada -->
+        <button class="button close">)</button>   <!-- Este botón no cuenta con una función programada-->
+      </div>
+
+      <!-- División para definir los bonotes que contienen operadores -->
+      <div class="operators">
+        <button class="button power">^</button>   <!-- Este botón no cuenta con una función programada -->
+        <button class="button square">sqr</button>   <!-- Este botón no cuenta con una función programada -->
+        <button class="button times" type="button" onclick='print_times()'>*</button>
+        <button class="button division" type="button" onclick='print_division()'>/</button>
+        <button class="button plus" type="button" onclick='print_plus()'>+</button>
+        <button class="button minus" type="button" onclick='print_minus()'>-</button>
+      </div>
+
+      <!-- En esta división se definen los botones con la función de borrar un solo carácter e imprimir el resultado -->
+      <div class="functions">
+        <button class="button delete" type="button" onclick='delete_char()'>Del</button>
+        <button class="button equal" type="button" onclick='calculate()'>=</button>
+      </div>
+    </div>
+    <footer>
+      <p>Creado por Marco Antonio Sánchez Hernández</p>
+      <p>Última actualización: 10/08/2021 a las 15:19</p>
+    </footer>
+  </body>
+
+</html>
