@@ -1,0 +1,15 @@
+/*  Definición de la tipografía VCR ODS Mono para su uso en la página.
+    El archivo .ttf fue recuperado de https://www.dafont.com/vcr-osd-mono.font
+    Todos los créditos de dicho archivo se atribuyen a quien corresponda.  */
+
+@font-face {
+  font-family: 'VCR OSD Mono';  /* Nombre a utilizar para la tipografía */
+    src: url('fonts/VCROSDMono.eot');
+    src: url('fonts/VCROSDMono.eot?#iefix') format('embedded-opentype'),
+        url('fonts/VCROSDMono.woff2') format('woff2'),
+        url('fonts/VCROSDMono.woff') format('woff'),
+        url('fonts/VCROSDMono.ttf') format('truetype'),
+        url('fonts/VCROSDMono.svg#VCROSDMono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
